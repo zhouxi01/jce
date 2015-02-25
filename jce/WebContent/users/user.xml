@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+	<user employeeSerialNum="86398054" role="admin"/>
+	<user employeeSerialNum="admin2" role="admin"/>
+	<user employeeSerialNum="admin3" role="admin"/>
+</users>

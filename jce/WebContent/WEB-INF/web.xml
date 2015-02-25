@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>jce</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Post</display-name>
+    <servlet-name>Post</servlet-name>
+    <servlet-class>service.Post</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Post</servlet-name>
+    <url-pattern>/Post</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Get</display-name>
+    <servlet-name>Get</servlet-name>
+    <servlet-class>service.Get</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Get</servlet-name>
+    <url-pattern>/Get</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>lo4jInit</servlet-name>
+    <servlet-class>service.Lo4jInit</servlet-class>
+    <init-param>
+      <param-name>log4j_init_path</param-name>
+      <param-value>\WEB-INF\classes\config\log4j.properties</param-value>
+    </init-param>
+    <init-param>
+      <param-name>log4j_file_path</param-name>
+      <param-value>\WEB-INF\logs\</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+</web-app>
